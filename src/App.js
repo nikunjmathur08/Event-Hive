@@ -6,7 +6,7 @@ import EventsPage from './pages/EventsPage';
 // import ProfilePage from './pages/ProfilePage';
 // import SettingsPage from './pages/SettingsPage';
 import HackathonsPage from './pages/HackathonsPage';
-// import RecruitmentsPage from './pages/RecruitmentsPage';
+import RecruitmentsPage from './pages/RecruitmentsPage';
 // import EventDetailsPage from './pages/EventDetailsPage';
 // import ClubDetailsPage from './pages/ClubDetailsPage';
 // import ClubsPage from './pages/ClubsPage';
@@ -16,15 +16,15 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<SignInSignUp />} />
-        {/* <Route path="/home" component={HomePage} /> */}
+        {/* <Route path="/home" element={<HomePage />} /> */}
         <Route path="/events" element={<EventsPage />} />
-        {/* <Route path="/profile" component={ProfilePage} /> */}
-        {/* <Route path="/settings" component={SettingsPage} /> */}
-        <Route path="/hackathons" component={HackathonsPage} />
-        {/* <Route path="/recruitments" component={RecruitmentsPage} /> */}
-        {/* <Route path="/event-details" component={EventDetailsPage} /> */}
-        {/* <Route path="/club-details" component={ClubDetailsPage} /> */}
-        {/* <Route path="/clubs" component={ClubsPage} /> */} */
+        {/* <Route path="/profile" element={<ProfilePage />} /> */}
+        {/* <Route path="/settings" element={<SettingsPage />} /> */}
+        <Route path="/hackathons" element={<HackathonsPage />} />
+        <Route path="/recruitments" element={<RecruitmentsPage />} />
+        {/* <Route path="/event-details" element={<EventDetailsPage />} /> */}
+        {/* <Route path="/club-details" element={<ClubDetailsPage />} /> */}
+        {/* <Route path="/clubs" element={<ClubsPage />} /> */} */
       </Routes>
     </Router>
   );
