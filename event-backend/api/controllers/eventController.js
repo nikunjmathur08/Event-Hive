@@ -16,7 +16,7 @@ exports.createEvent = async (req, res, next) => {
 //all events in HomePage
 exports.getEvents = async (req, res, next) => {
   try {
-    const events = await Event.find().limit(8);
+    const events = await Event.find();
     if(!events) return next(createError(404, "No events found!"));
     res.status(200).json(events);
   } catch (err) {
@@ -26,7 +26,7 @@ exports.getEvents = async (req, res, next) => {
 //event by category in Homepage
 exports.getEventbyCategory = async (req, res, next) => {  
   try {
-    const events = await Event.find({ category: req.params.category }).limit(8);
+    const events = await Event.find({ category: req.params.category });
     if(events.length==0) {
       res.status(200).json({message: "No events found!"});
         }
@@ -53,7 +53,7 @@ exports.getPastEvents = async (req, res, next) => {
     const events = await Event.find({
       category: req.params.category,
       startDate: { $lt: today.setHours(0,0,0,0) },
-      endDate:{$lt: today} }).sort({ date: 1 }).limit(4);
+      endDate:{$lt: today} }).sort({ date: 1 });
       if(events.length==0) {
         res.status(200).json({message: "No events found!"});
           }
@@ -68,7 +68,7 @@ exports.getUpcomingEvents = async (req, res, next) => {
   try {
     const events = await Event.find({
     category: req.params.category,  
-    startDate: { $gt: new Date() } }).sort({ date: 1 }).limit(4);
+    startDate: { $gt: new Date() } }).sort({ date: 1 });
     if(events.length==0) {
       res.status(200).json({message: "No events found!"});
         }
@@ -85,7 +85,7 @@ exports.getOngoingEvents = async (req, res, next) => {
     const events = await Event.find({
       category: req.params.category,
       startDate: { $lte: today },
-      endDate: { $gte: today } }).sort({ date: 1 }).limit(4);
+      endDate: { $gte: today } }).sort({ date: 1 });
       if(events.length==0) {
         res.status(200).json({message: "No events found!"});
           }

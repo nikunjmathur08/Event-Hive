@@ -36,7 +36,7 @@ app.use((err, req, res, next) => {
 //middlewares
 app.use("/api/auth",require("./api/routes/authRoutes.js"));
 app.use("/api/event",require("./api/routes/eventRoutes.js"));
-
+app.use("/api/club",require("./api/routes/clubRoutes.js"));
 
 app.listen(4000, () =>{
   connect()
