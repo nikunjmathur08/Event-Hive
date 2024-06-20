@@ -1,13 +1,22 @@
 const Event = require('../models/event.js');
+const sendMail = require('../utils/mail.js');
+const Subscription = require('../models/subscription.js');
+const { createError } = require('../utils/error.js');
 // Create Event
 exports.createEvent = async (req, res, next) => {
   const newEvent = new Event(req.body);
 
   try {
     const savedEvent = await newEvent.save();
+    
     if (!savedEvent) {
       return next(createError(400, "Event could not be created!"));
     }
+    //send email to all subscribers of the club
+    const subscribers = await Subscription.find({ club: req.body.club });
+    subscribers.forEach(subscriber => {
+      sendMail(subscriber.email, savedEvent);
+    });
     res.status(200).json({ message:"Event Created successfully.", details: savedEvent});
   } catch (err) {
     next(err);
@@ -95,4 +104,5 @@ exports.getOngoingEvents = async (req, res, next) => {
     next(err);
   }
 };
+
 

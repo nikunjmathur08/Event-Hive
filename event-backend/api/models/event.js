@@ -38,6 +38,9 @@ endDate: {
     enum: ['Hackathon', 'Recruitment','Events'],
     required: true
   },
+  resigtrationLink: {
+    type: String,
+  },
   Timestamp: {
     type: Date,
     default: Date.now
