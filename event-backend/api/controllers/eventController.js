@@ -1,13 +1,22 @@
 const Event = require('../models/event.js');
+const sendMail = require('../utils/mail.js');
+const Subscription = require('../models/subscription.js');
+const { createError } = require('../utils/error.js');
 // Create Event
 exports.createEvent = async (req, res, next) => {
   const newEvent = new Event(req.body);
 
   try {
     const savedEvent = await newEvent.save();
+    
     if (!savedEvent) {
       return next(createError(400, "Event could not be created!"));
     }
+    //send email to all subscribers of the club
+    const subscribers = await Subscription.find({ club: req.body.club });
+    subscribers.forEach(subscriber => {
+      sendMail(subscriber.email, savedEvent);
+    });
     res.status(200).json({ message:"Event Created successfully.", details: savedEvent});
   } catch (err) {
     next(err);
@@ -16,7 +25,7 @@ exports.createEvent = async (req, res, next) => {
 //all events in HomePage
 exports.getEvents = async (req, res, next) => {
   try {
-    const events = await Event.find().limit(8);
+    const events = await Event.find();
     if(!events) return next(createError(404, "No events found!"));
     res.status(200).json(events);
   } catch (err) {
@@ -26,7 +35,7 @@ exports.getEvents = async (req, res, next) => {
 //event by category in Homepage
 exports.getEventbyCategory = async (req, res, next) => {  
   try {
-    const events = await Event.find({ category: req.params.category }).limit(8);
+    const events = await Event.find({ category: req.params.category });
     if(events.length==0) {
       res.status(200).json({message: "No events found!"});
         }
@@ -53,7 +62,7 @@ exports.getPastEvents = async (req, res, next) => {
     const events = await Event.find({
       category: req.params.category,
       startDate: { $lt: today.setHours(0,0,0,0) },
-      endDate:{$lt: today} }).sort({ date: 1 }).limit(4);
+      endDate:{$lt: today} }).sort({ date: 1 });
       if(events.length==0) {
         res.status(200).json({message: "No events found!"});
           }
@@ -68,7 +77,7 @@ exports.getUpcomingEvents = async (req, res, next) => {
   try {
     const events = await Event.find({
     category: req.params.category,  
-    startDate: { $gt: new Date() } }).sort({ date: 1 }).limit(4);
+    startDate: { $gt: new Date() } }).sort({ date: 1 });
     if(events.length==0) {
       res.status(200).json({message: "No events found!"});
         }
@@ -85,7 +94,7 @@ exports.getOngoingEvents = async (req, res, next) => {
     const events = await Event.find({
       category: req.params.category,
       startDate: { $lte: today },
-      endDate: { $gte: today } }).sort({ date: 1 }).limit(4);
+      endDate: { $gte: today } }).sort({ date: 1 });
       if(events.length==0) {
         res.status(200).json({message: "No events found!"});
           }
@@ -95,3 +104,5 @@ exports.getOngoingEvents = async (req, res, next) => {
     next(err);
   }
 };
+
+

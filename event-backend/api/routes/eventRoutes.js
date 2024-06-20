@@ -11,4 +11,4 @@ router.get("/category/:category/upcoming",eventController.getUpcomingEvents);
 router.get("/category/:category/ongoing",eventController.getOngoingEvents);
 
 
-module.exports= router;
+module.exports= router; 
