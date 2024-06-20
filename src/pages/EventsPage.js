@@ -20,28 +20,44 @@ const events =  [
     id: '1',
     image: eventImage1,
     name: 'jazz up the taste',
-    clubName: 'alexa developers'
+    clubName: 'alexa developers',
+    venue: 'abc hall',
+    date: '12/12/24',
+    timings: '8 to 2',
+    description: 'sfbuydsvhdfs'
   },
 
   {
     id: '2',
     image: eventImage2,
     name: 'alexaverse',
-    clubName: 'alexa developers'
+    clubName: 'alexa developers',
+    venue: 'abc hall',
+    date: '12/12/24',
+    timings: '8 to 2',
+    description: 'sfbuydsvhdfs'
   },
 
   {
     id: '3',
     image: eventImage3,
     name: 'app archives',
-    clubName: 'cherry+ network'
+    clubName: 'cherry+ network',
+    venue: 'abc hall',
+    date: '12/12/24',
+    timings: '8 to 2',
+    description: 'sfbuydsvhdfs'
   },
 
   {
     id: '4',
     image: eventImage4,
     name: 'roadshow',
-    clubName: 'aarush'
+    clubName: 'aarush',
+    venue: 'abc hall',
+    date: '12/12/24',
+    timings: '8 to 2',
+    description: 'sfbuydsvhdfs'
   }
 ]
 
@@ -50,35 +66,55 @@ const artist = [
     id: '5',
     image: artistImage1,
     name: 'quantum computing',
-    clubName: 'ft. glitching coffée mAcHine'
+    clubName: 'ft. glitching coffée mAcHine',
+    venue: 'abc hall',
+    date: '12/12/24',
+    timings: '8 to 2',
+    description: 'sfbuydsvhdfs'
   },
 
   {
     id: '6',
     image: artistImage2,
     name: 'vr symposium',
-    clubName: 'with vr based in space ooo'
+    clubName: 'with vr based in space ooo',
+    venue: 'abc hall',
+    date: '12/12/24',
+    timings: '8 to 2',
+    description: 'sfbuydsvhdfs'
   },
 
   {
     id: '7',
     image: artistImage3,
     name: 'ai ethics conference',
-    clubName: 'voice assistant critiquing itself'
+    clubName: 'voice assistant critiquing itself',
+    venue: 'abc hall',
+    date: '12/12/24',
+    timings: '8 to 2',
+    description: 'sfbuydsvhdfs'
   },
 
   {
     id: '8',
     image: artistImage4,
     name: 'robotics expo',
-    clubName: 'ft. dancing vacuum cleaner'
+    clubName: 'ft. dancing vacuum cleaner',
+    venue: 'abc hall',
+    date: '12/12/24',
+    timings: '8 to 2',
+    description: 'sfbuydsvhdfs'
   },
 
   {
     id: '9',
     image: artistImage5,
     name: 'iot showcase',
-    clubName: 'with a crazy grocery ordering fridge'
+    clubName: 'with a crazy grocery ordering fridge',
+    venue: 'abc hall',
+    date: '12/12/24',
+    timings: '8 to 2',
+    description: 'sfbuydsvhdfs'
   },
 ]
 
@@ -99,20 +135,15 @@ const EventsPage = () => {
         </div>
         <h2>upcoming events</h2>
         <div className="events-grid">
-        {artist.map(artist => (
+        {artist.map(artistData => (
             <ArtistCard
-              key={artist.id}
-              image={artist.image}
-              name={artist.name}
-              clubName={artist.clubName}
-              eventId={artist.id}
+              key={artistData.id}
+              image={artistData.image}
+              name={artistData.name}
+              clubName={artistData.clubName}
+              eventId={artistData.id}
             />
           ))}
-          {/* <ArtistCard image={artistImage1} title="quantum computing conv." subtitle="ft. glitching coffée mAcHine" />
-          <ArtistCard image={artistImage2} title="vr symposium" subtitle="with vr based in space ooo" />
-          <ArtistCard image={artistImage3} title="ai ethics conference" subtitle="voice assistant critiquing itself" />
-          <ArtistCard image={artistImage4} title="robotics expo" subtitle="ft. dancing vacuum cleaner" />
-          <ArtistCard image={artistImage5} title="iot showcase" subtitle="with a crazy grocery ordering fridge" /> */}
         </div>
       </div>
     </div>

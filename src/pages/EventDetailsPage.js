@@ -4,24 +4,20 @@ import './EventDetailsPage.css';
 
 const EventDetailsPage = () => {
   const location = useLocation();
-  const { event } = location.state || { event: {} };
-
-  if (!event) {
-    return <div>No event details available.</div>;
-  }
+  const { event } = location.state;
 
   return (
     <div className="event-details-page">
-      <h1>EVENT DETAILS</h1>
-      <div className="event-details-container">
-        <img src={event.image} alt={event.name} className="event-image" />
-        <div className="event-info">
+      <h1>event details</h1>
+      <div className="event-details-card">
+        <img src={event.image} alt={event.name} />
+        <div className="event-details-info">
           <h2>{event.name}</h2>
-          <p><strong>Organized by:</strong> {event.clubName}</p>
-          <p><strong>Venue:</strong> {event.venue}</p>
-          <p><strong>Description:</strong> {event.description}</p>
-          <p><strong>Date:</strong> {event.date}</p>
-          <p><strong>Timings:</strong> {event.timings}</p>
+          <p>organized by: {event.clubName}</p>
+          <p>event venue: {event.venue}</p>
+          <p>event description: {event.description}</p>
+          <p>date: {event.date}</p>
+          <p>timings: {event.timings}</p>
           <button className="register-button">Register</button>
         </div>
       </div>
