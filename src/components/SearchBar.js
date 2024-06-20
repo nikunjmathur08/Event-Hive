@@ -7,7 +7,7 @@ const SearchBar = () => {
   return (
     <div className="search-bar">
       <FontAwesomeIcon icon={faSearch} className="search-icon" />
-      <input type="text" placeholder="Search" />
+      <input type="text" placeholder="search" />
     </div>
   );
 };

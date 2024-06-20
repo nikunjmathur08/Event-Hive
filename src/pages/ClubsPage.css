@@ -1,0 +1,21 @@
+.clubs-page {
+    display: flex;
+  }
+  
+  .main-content {
+    margin-left: 220px;
+    padding: 20px;
+    flex-grow: 1;
+  }
+  
+  .clubs-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.main-content h2 {
+  margin-left: 20px;
+  font-size: 50px;
+  font-family: Inter;
+  margin-bottom: 15px;
+}  

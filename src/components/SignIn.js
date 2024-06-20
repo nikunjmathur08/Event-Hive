@@ -100,18 +100,18 @@ const Para = styled.p`
 const SignIn = () => {
   return (
     <FormContainer>
-      <Heading><Span1>Event </Span1>  <Span> Hive</Span></Heading>
-      <Title>Sign In to Event Hive</Title>
+      <Heading><Span1>event </Span1><Span> hive</Span></Heading>
+      <Title>sign in to event hive</Title>
       <Form id="signInForm">
-        <Input type="email" placeholder="Enter your email" id ="signInEmail"/>
-        <Input type="password" placeholder="Enter your password" id="signInPassword"/>
-        <center><Button>Sign In</Button></center>
+        <Input type="email" placeholder="enter your email" id ="signInEmail"/>
+        <Input type="password" placeholder="enter your password" id="signInPassword"/>
+        <center><Button>sign in</Button></center>
       </Form>
-      <Para>Or</Para>
+      <Para>or</Para>
       <center>
         <GoogleButton id="signInGoogleButton">
             <GoogleIcon src={googleLogo} />
-            Sign in with Google
+            sign in with google
         </GoogleButton>
       </center>
     </FormContainer>

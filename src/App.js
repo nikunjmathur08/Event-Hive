@@ -7,9 +7,9 @@ import EventsPage from './pages/EventsPage';
 // import SettingsPage from './pages/SettingsPage';
 import HackathonsPage from './pages/HackathonsPage';
 import RecruitmentsPage from './pages/RecruitmentsPage';
-// import EventDetailsPage from './pages/EventDetailsPage';
+import EventDetailsPage from './pages/EventDetailsPage';
 // import ClubDetailsPage from './pages/ClubDetailsPage';
-// import ClubsPage from './pages/ClubsPage';
+import ClubsPage from './pages/ClubsPage';
 
 function App() {
   return (
@@ -22,9 +22,9 @@ function App() {
         {/* <Route path="/settings" element={<SettingsPage />} /> */}
         <Route path="/hackathons" element={<HackathonsPage />} />
         <Route path="/recruitments" element={<RecruitmentsPage />} />
-        {/* <Route path="/event-details" element={<EventDetailsPage />} /> */}
+        <Route path="/events/:id" element={<EventDetailsPage />} />
         {/* <Route path="/club-details" element={<ClubDetailsPage />} /> */}
-        {/* <Route path="/clubs" element={<ClubsPage />} /> */} */
+        <Route path="/clubs" element={<ClubsPage />} /> */
       </Routes>
     </Router>
   );
