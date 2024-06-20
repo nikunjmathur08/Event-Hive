@@ -1,20 +1,91 @@
 import React from 'react';
 import SideBar from '../components/SideBar';
 import EventCard from '../components/EventCard';
-import ArtistCard1 from '../components/ArtistCard1';
 import SearchBar from '../components/SearchBar';
 import './RecruitmentsPage.css';
 
-import eventImage1 from '../assets/event-1.png';
-import eventImage2 from '../assets/event-2.gif';
-import eventImage3 from '../assets/event-3.png';
-import eventImage4 from '../assets/event-4.jpg';
-import eventImage5 from '../assets/event-5.gif';
-import artistImage1 from '../assets/artist-1.jpg';
-import artistImage2 from '../assets/artist-2.jpg';
-import artistImage3 from '../assets/artist-3.jpg';
-import artistImage4 from '../assets/artist-4.jpg';
-import artistImage5 from '../assets/artist-5.jpg';
+import recImage1 from '../assets/rec-1.jpg';
+import recImage2 from '../assets/rec-2.jpg';
+import recImage3 from '../assets/rec-3.jpg';
+import recImage4 from '../assets/rec-4.jpg';
+import recImage5 from '../assets/rec-5.gif';
+import recImage6 from '../assets/rec-6.jpg';
+import recImage7 from '../assets/rec-7.png';
+import recImage8 from '../assets/rec-8.png';
+import recImage9 from '../assets/rec-9.jpg';
+import recImage10 from '../assets/rec-10.png';
+
+const recruitments =  [
+  {
+    id: '1',
+    image: recImage1,
+    name: 'shhh! internal recruit',
+    clubName: 'the dead club *_*'
+  },
+
+  {
+    id: '2',
+    image: recImage2,
+    name: 'ads recruitment :))',
+    clubName: 'alexa developers'
+  },
+
+  {
+    id: '3',
+    image: recImage3,
+    name: 'app constructors ^_^',
+    clubName: 'cherry+ network'
+  },
+
+  {
+    id: '4',
+    image: recImage4,
+    name: 'smth cool? xd',
+    clubName: 'aarush'
+  },
+
+  {
+    id: '5',
+    image: recImage5,
+    name: 'cool shit.',
+    clubName: 'dope'
+  },
+
+  {
+    id: '6',
+    image: recImage6,
+    name: 'another recruitment',
+    clubName: 'dunno'
+  },
+
+  {
+    id: '7',
+    image: recImage7,
+    name: 'another recruitment 2.0',
+    clubName: 'ntl?'
+  },
+
+  {
+    id: '8',
+    image: recImage8,
+    name: 'another recruitment 3.0',
+    clubName: 'honestly no idea'
+  },
+
+  {
+    id: '9',
+    image: recImage9,
+    name: 'another recruitment 4.0',
+    clubName: '...'
+  },
+
+  {
+    id: '10',
+    image: recImage10,
+    name: 'another recruitment 5.0',
+    clubName: 'what we even doing?!'
+  }
+]
 
 const RecruitmentsPage = () => {
   return (
@@ -22,21 +93,14 @@ const RecruitmentsPage = () => {
       <SideBar />
       <div className="main-content">
         <SearchBar />
-        <h2>Recruitments Open!</h2>
+        <h2>recruitments open!</h2>
         <div className="recruitments-grid">
-          <EventCard image={eventImage1} title="Shhh! Internal Recruit" subtitle="The Dead Club *_*" />
-          <EventCard image={eventImage2} title="ADS Recruitment :))" subtitle="Alexa Developers" />
-          <EventCard image={eventImage3} title="App Constructors ^_^" subtitle="Cherry+ Network" />
-          <EventCard image={eventImage4} title="Smth Cool? XD" subtitle="Aarush" />
-          <EventCard image={eventImage5} title="Cool Shit." subtitle="Dope" />
-        </div>
-        {/* <h2>Upcoming Hackathons</h2> */}
-        <div className="recruitments-grid">
-          <ArtistCard1 image={artistImage1} title="Another Recruitment" subtitle="Dunno" />
-          <ArtistCard1 image={artistImage2} title="Another Recruitment 2.0" subtitle="NTL?" />
-          <ArtistCard1 image={artistImage3} title="Another Recruitment 3.0" subtitle="Honestly No Idea" />
-          <ArtistCard1 image={artistImage4} title="Another Recruitment 4.0" subtitle="..." />
-          <ArtistCard1 image={artistImage5} title="Another Recruitment 5.0" subtitle="What we even doing?!" />
+        {recruitments.map(recruitmentData => (
+            <EventCard
+              key={recruitmentData.id}
+              eventData={recruitmentData}
+            />
+          ))}
         </div>
       </div>
     </div>

@@ -1,0 +1,41 @@
+.event-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .event-details-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  .event-details-image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .event-details-info {
+    max-width: 500px;
+  }
+  
+  .event-details-info h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .event-details-info p {
+    margin-bottom: 10px;
+  }
+  
+  .register-button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

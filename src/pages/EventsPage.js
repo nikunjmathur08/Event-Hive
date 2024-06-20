@@ -15,26 +15,104 @@ import artistImage3 from '../assets/artist-3.jpg';
 import artistImage4 from '../assets/artist-4.jpg';
 import artistImage5 from '../assets/artist-5.jpg';
 
+const events =  [
+  {
+    id: '1',
+    image: eventImage1,
+    name: 'jazz up the taste',
+    clubName: 'alexa developers'
+  },
+
+  {
+    id: '2',
+    image: eventImage2,
+    name: 'alexaverse',
+    clubName: 'alexa developers'
+  },
+
+  {
+    id: '3',
+    image: eventImage3,
+    name: 'app archives',
+    clubName: 'cherry+ network'
+  },
+
+  {
+    id: '4',
+    image: eventImage4,
+    name: 'roadshow',
+    clubName: 'aarush'
+  }
+]
+
+const artist = [
+  {
+    id: '5',
+    image: artistImage1,
+    name: 'quantum computing',
+    clubName: 'ft. glitching coffée mAcHine'
+  },
+
+  {
+    id: '6',
+    image: artistImage2,
+    name: 'vr symposium',
+    clubName: 'with vr based in space ooo'
+  },
+
+  {
+    id: '7',
+    image: artistImage3,
+    name: 'ai ethics conference',
+    clubName: 'voice assistant critiquing itself'
+  },
+
+  {
+    id: '8',
+    image: artistImage4,
+    name: 'robotics expo',
+    clubName: 'ft. dancing vacuum cleaner'
+  },
+
+  {
+    id: '9',
+    image: artistImage5,
+    name: 'iot showcase',
+    clubName: 'with a crazy grocery ordering fridge'
+  },
+]
+
 const EventsPage = () => {
   return (
     <div className="events-page">
       <SideBar />
       <div className="main-content">
         <SearchBar />
-        <h2>Ongoing Events</h2>
+        <h2>ongoing events</h2>
         <div className="events-grid">
-          <EventCard image={eventImage1} title="Jazz Up The Taste" subtitle="Alexa Developers" />
-          <EventCard image={eventImage2} title="AlexaVerse" subtitle="Alexa Developers" />
-          <EventCard image={eventImage3} title="App Archives" subtitle="Cherry+ Network" />
-          <EventCard image={eventImage4} title="RoadShow" subtitle="Aarush" />
+          {events.map(eventData => (
+            <EventCard
+              key={eventData.id}
+              eventData={eventData}
+            />
+          ))}
         </div>
-        <h2>Upcoming Events</h2>
+        <h2>upcoming events</h2>
         <div className="events-grid">
-          <ArtistCard image={artistImage1} title="Nikhil D Souza" subtitle="R&B" />
-          <ArtistCard image={artistImage2} title="Marshmello" subtitle="Pop" />
-          <ArtistCard image={artistImage3} title="Marshmello" subtitle="Pop" />
-          <ArtistCard image={artistImage4} title="Swae Lee" subtitle="Moodie" />
-          <ArtistCard image={artistImage5} title="The Weeknd" subtitle="Pop" />
+        {artist.map(artist => (
+            <ArtistCard
+              key={artist.id}
+              image={artist.image}
+              name={artist.name}
+              clubName={artist.clubName}
+              eventId={artist.id}
+            />
+          ))}
+          {/* <ArtistCard image={artistImage1} title="quantum computing conv." subtitle="ft. glitching coffée mAcHine" />
+          <ArtistCard image={artistImage2} title="vr symposium" subtitle="with vr based in space ooo" />
+          <ArtistCard image={artistImage3} title="ai ethics conference" subtitle="voice assistant critiquing itself" />
+          <ArtistCard image={artistImage4} title="robotics expo" subtitle="ft. dancing vacuum cleaner" />
+          <ArtistCard image={artistImage5} title="iot showcase" subtitle="with a crazy grocery ordering fridge" /> */}
         </div>
       </div>
     </div>

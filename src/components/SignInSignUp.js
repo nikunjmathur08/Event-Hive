@@ -83,9 +83,9 @@ const SignInSignUp = () => {
           </Panel>
           <ImagePanel>
             <div>
-              <Heading>Hello Friend</Heading>
-              <Para>To keep connected with us provide us with your information</Para>
-              <Button onClick={() => setIsSignIn(false)} id="toggleToSignUpButton"><Para1>Sign Up</Para1></Button>
+              <Heading>'sup friend</Heading>
+              <Para>to keep connected with us provide us with your information</Para>
+              <Button onClick={() => setIsSignIn(false)} id="toggleToSignUpButton"><Para1>sign up</Para1></Button>
             </div>
           </ImagePanel>
         </>
@@ -93,9 +93,9 @@ const SignInSignUp = () => {
         <>
           <ImagePanel1>
             <div>
-              <Heading>Welcome Back</Heading>
-              <Para>To keep connected with us provide us with your information</Para>
-              <Button onClick={() => setIsSignIn(true)} id="toggleToSignInButton"><Para1>Sign In </Para1></Button>
+              <Heading>welcome back</Heading>
+              <Para>to keep connected with us provide us with your information</Para>
+              <Button onClick={() => setIsSignIn(true)} id="toggleToSignInButton"><Para1>sign in </Para1></Button>
             </div>
           </ImagePanel1>
           <Panel>

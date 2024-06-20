@@ -18,7 +18,7 @@ function SideBar() {
           <NavLink to="/">
             <FontAwesomeIcon icon={faHome} className="sidebar-icon" />
             <Heading>
-            Home
+            home
             </Heading>
           </NavLink>
         </li>
@@ -26,7 +26,7 @@ function SideBar() {
           <NavLink to="/events">
             <FontAwesomeIcon icon={faCalendarAlt} className="sidebar-icon" />
             <Heading>
-            Events
+            events
             </Heading>
           </NavLink>
         </li>
@@ -34,7 +34,7 @@ function SideBar() {
           <NavLink to="/hackathons">
             <FontAwesomeIcon icon={faLaptopCode} className="sidebar-icon" />
             <Heading>
-            Hackathons
+            hackathons
             </Heading>
           </NavLink>
         </li>
@@ -42,7 +42,7 @@ function SideBar() {
           <NavLink to="/recruitments">
             <FontAwesomeIcon icon={faBriefcase} className="sidebar-icon" />
             <Heading>
-            Recruitments
+            recruitments
             </Heading>
           </NavLink>
         </li>
@@ -50,7 +50,7 @@ function SideBar() {
           <NavLink to="/clubs">
             <FontAwesomeIcon icon={faUsers} className="sidebar-icon" />
             <Heading>
-            Clubs
+            clubs
             </Heading>
           </NavLink>
         </li>
@@ -58,7 +58,7 @@ function SideBar() {
           <NavLink to="/profile">
             <FontAwesomeIcon icon={faUser} className="sidebar-icon" />
             <Heading>
-            Profile
+            profile
             </Heading>
           </NavLink>
         </li>
@@ -66,7 +66,7 @@ function SideBar() {
           <NavLink to="/settings">
             <FontAwesomeIcon icon={faCog} className="sidebar-icon" />
             <Heading>
-            Settings
+            settings
             </Heading>
           </NavLink>
         </li>
