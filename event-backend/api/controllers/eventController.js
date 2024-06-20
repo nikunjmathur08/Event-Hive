@@ -95,3 +95,4 @@ exports.getOngoingEvents = async (req, res, next) => {
     next(err);
   }
 };
+

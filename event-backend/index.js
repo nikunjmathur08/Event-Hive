@@ -1,10 +1,16 @@
-const cookieParser = require('cookie-parser');
 const express = require('express');
 const dotenv = require('dotenv').config();
 const mongoose = require('mongoose');
-const app = express()
+const cookieParser = require('cookie-parser');
 const cors = require('cors');
+
+const app = express()
+
 app.use(cors());
+app.use(cookieParser());
+app.use(express.json());
+
+//connect to mongoDB
 const connect = async () => {
   try {
     await mongoose.connect(process.env.CONNECTION_STRING);
@@ -13,6 +19,8 @@ const connect = async () => {
     throw error;
   }
 };
+
+//error handling middleware
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
   const errorMessage = err.message || "Something went wrong!";
@@ -24,15 +32,11 @@ app.use((err, req, res, next) => {
   });
 });
 
-mongoose.connection.on("disconnected", () => {
-  console.log("mongoDB disconnected!");
-});
 
-app.use(cookieParser());
-app.use(express.json());
 //middlewares
 app.use("/api/auth",require("./api/routes/authRoutes.js"));
 app.use("/api/event",require("./api/routes/eventRoutes.js"));
+
 
 app.listen(4000, () =>{
   connect()
