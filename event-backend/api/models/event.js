@@ -17,9 +17,13 @@ const EventSchema = new Schema({
   photo: {
     type: [String],
   },
-  date: {
+  startDate: {
     type: Date,
     required: true
+},
+endDate: {
+  type: Date,
+  required: true
 },
   time: {
     type: String,

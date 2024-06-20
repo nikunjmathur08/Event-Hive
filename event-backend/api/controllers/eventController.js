@@ -46,12 +46,14 @@ exports.getEvent = async (req, res, next) => {
     next(err);
   }
 };
-// past and upcoming events
+// past events
 exports.getPastEvents = async (req, res, next) => {
   try{
+    const today = new Date();
     const events = await Event.find({
       category: req.params.category,
-      date: { $lte: new Date() } }).sort({ date: 1 }).limit(4);
+      startDate: { $lt: today.setHours(0,0,0,0) },
+      endDate:{$lt: today} }).sort({ date: 1 }).limit(4);
       if(events.length==0) {
         res.status(200).json({message: "No events found!"});
           }
@@ -61,18 +63,35 @@ exports.getPastEvents = async (req, res, next) => {
     next(err);
   }
 };
-
+// upcoming events
 exports.getUpcomingEvents = async (req, res, next) => {
   try {
     const events = await Event.find({
     category: req.params.category,  
-    date: { $gt: new Date() } }).sort({ date: 1 }).limit(4);
+    startDate: { $gt: new Date() } }).sort({ date: 1 }).limit(4);
     if(events.length==0) {
       res.status(200).json({message: "No events found!"});
         }
     else {
     res.status(200).json(events); }
   } catch (err) {
+    next(err);
+  }
+};
+// ongoing events
+exports.getOngoingEvents = async (req, res, next) => {  
+  try {
+    const today = new Date();
+    const events = await Event.find({
+      category: req.params.category,
+      startDate: { $lte: today },
+      endDate: { $gte: today } }).sort({ date: 1 }).limit(4);
+      if(events.length==0) {
+        res.status(200).json({message: "No events found!"});
+          }
+      else {
+      res.status(200).json(events); }
+  } catch (err) { 
     next(err);
   }
 };
