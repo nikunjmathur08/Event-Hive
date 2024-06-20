@@ -1,5 +1,6 @@
 .event-details-page {
-  padding: 20px;
+  padding-left: 20px;
+  padding-top: 5px;
 }
 
 .event-details-card {
@@ -8,30 +9,32 @@
   align-items: center;
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 25px;
   max-width: 800px;
   margin: 0 auto;
 }
 
 .event-details-card img {
   width: 100%;
-  height: auto;
+  height: 40%;
   border-radius: 10px;
 }
 
 .event-details-info {
-  text-align: left;
-  margin-top: 20px;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .event-details-info h2 {
-  font-size: 24px;
+  font-size: 30px;
+  font-family: Inter;
   margin-bottom: 10px;
 }
 
 .event-details-info p {
   margin: 5px 0;
+  font-family: Inter;
   color: #555;
 }
 
@@ -40,6 +43,8 @@
   background-color: black;
   color: white;
   border: none;
+  width: 250px;
+  font-family: Inter;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 20px;
@@ -47,5 +52,7 @@
 }
 
 .register-button:hover {
-  background-color: #333;
+  background-color: #fff;
+  color: black;
+  border: 1px solid #000;
 }

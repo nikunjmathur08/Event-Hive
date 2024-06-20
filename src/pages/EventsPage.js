@@ -138,10 +138,7 @@ const EventsPage = () => {
         {artist.map(artistData => (
             <ArtistCard
               key={artistData.id}
-              image={artistData.image}
-              name={artistData.name}
-              clubName={artistData.clubName}
-              eventId={artistData.id}
+              artistData={artistData}
             />
           ))}
         </div>

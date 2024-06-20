@@ -6,7 +6,7 @@ import { faHome, faCalendarAlt, faLaptopCode, faBriefcase, faUsers, faUser, faCo
 import './SideBar.css';
 
 const Heading = styled.h1`
-  padding: 1px;
+  padding-top: 10px;
   font-size: 15px;
 `
 

@@ -106,13 +106,10 @@ const HackathonsPage = () => {
         </div>
         <h2>upcoming hackathons</h2>
         <div className="hackathons-grid">
-        {artist.map(artist => (
+        {artist.map(artistData => (
             <ArtistCard
-              key={artist.id}
-              image={artist.image}
-              name={artist.name}
-              clubName={artist.clubName}
-              eventId={artist.id}
+              key={artistData.id}
+              artistData={artistData}
             />
           ))}
         </div>

@@ -3,18 +3,20 @@
     padding: 2px;
     border: 1px solid #828282;
     border-radius: 8px;
+    display: flex;
   }
   
   .search-bar input {
     font-family: Inter;
-    padding: 10px;
+    padding-top: 15px;
     font-size: 15px;
     border: none;
+    outline: none;
   }
 
   .search-icon{
     margin-left: 10px;
-    padding-top: 1px;
+    padding-top: 15px;
     margin-right: 5px;
   }
   

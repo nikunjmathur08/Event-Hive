@@ -101,8 +101,8 @@ const Para = styled.p`
 const SignUp = () => {
   return (
     <FormContainer>
-      <Heading><Span1>event </Span1><Span> hive</Span></Heading>
-      <Title>sign up to event hive</Title>
+      <Heading><Span1>evin </Span1><Span> co</Span></Heading>
+      <Title>sign up to evinco</Title>
       <Form id="signUpForm">
         <Input type="text" placeholder="enter your name" id="signUpName" />
         <Input type="email" placeholder="enter your email" id="signUpEmail"/>

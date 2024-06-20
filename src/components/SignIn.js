@@ -100,8 +100,8 @@ const Para = styled.p`
 const SignIn = () => {
   return (
     <FormContainer>
-      <Heading><Span1>event </Span1><Span> hive</Span></Heading>
-      <Title>sign in to event hive</Title>
+      <Heading><Span1>evin </Span1><Span> co</Span></Heading>
+      <Title>sign in to evinco</Title>
       <Form id="signInForm">
         <Input type="email" placeholder="enter your email" id ="signInEmail"/>
         <Input type="password" placeholder="enter your password" id="signInPassword"/>
