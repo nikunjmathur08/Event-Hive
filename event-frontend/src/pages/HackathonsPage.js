@@ -4,9 +4,8 @@ import EventCard from '../components/EventCard';
 import ArtistCard from '../components/ArtistCard';
 import SearchBar from '../components/SearchBar';
 import './HackathonsPage.css';
-
 //fetch
-import useFetch from '../hooks/usefetch';
+import useFetch from '../usefetch';
 
 
 const HackathonsPage = () => {
