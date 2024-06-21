@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import googleLogo from '../assets/Logo.png';
+import { useGoogleLogin } from '@react-oauth/google';
+import axios from 'axios';
 
 const FormContainer = styled.div`
   width: 80%;
@@ -98,6 +100,24 @@ const Para = styled.p`
 `;
 
 const SignIn = () => {
+  const login = useGoogleLogin({
+    onSuccess: async (response) => {
+      try {
+        const res = await axios.get('https://www.googleapis.com/oauth2/v3/userinfo', {
+          headers: {
+            'Authorization': `Bearer ${response.access_token}`,
+          },
+        });
+        console.log(res.data);
+        // Handle successful login here (e.g., save user data, navigate to another page, etc.)
+      } catch (err) {
+        console.error(err);
+      }
+    },
+    onFailure: (error) => {
+      console.error('Login failed:', error);
+    },
+  });
   return (
     <FormContainer>
       <Heading><Span1>evin </Span1><Span> co</Span></Heading>
@@ -109,7 +129,7 @@ const SignIn = () => {
       </Form>
       <Para>or</Para>
       <center>
-        <GoogleButton id="signInGoogleButton">
+        <GoogleButton id="signInGoogleButton" onClick={() => login()}>
             <GoogleIcon src={googleLogo} />
             sign in with google
         </GoogleButton>

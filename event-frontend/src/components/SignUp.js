@@ -1,7 +1,9 @@
-// src/components/SignUp.js
 import React from 'react';
 import styled from 'styled-components';
 import googleLogo from '../assets/Logo.png';
+import { useGoogleLogin } from '@react-oauth/google';
+import axios from 'axios';
+
 
 const FormContainer = styled.div`
   width: 80%;
@@ -99,6 +101,26 @@ const Para = styled.p`
 `;
 
 const SignUp = () => {
+
+  const signup = useGoogleLogin({
+    onSuccess: async (response) => {
+      try {
+        const res = await axios.get('https://www.googleapis.com/oauth2/v3/userinfo', {
+          headers: {
+            'Authorization': `Bearer ${response.access_token}`,
+          },
+        });
+        console.log(res.data);
+        // Handle successful signup here (e.g., save user data, navigate to another page, etc.)
+      } catch (err) {
+        console.error(err);
+      }
+    },
+    onFailure: (error) => {
+      console.error('Signup failed:', error);
+    },
+  });
+
   return (
     <FormContainer>
       <Heading><Span1>evin </Span1><Span> co</Span></Heading>
@@ -112,7 +134,7 @@ const SignUp = () => {
       </Form>
       <Para>or</Para>
       <center>
-        <GoogleButton id="signUpGoogleButton">
+        <GoogleButton id="signUpGoogleButton" onClick={() => signup()}>
           <GoogleIcon src={googleLogo} />
           sign up with google
         </GoogleButton>
