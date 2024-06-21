@@ -1,0 +1,50 @@
+.event-filter {
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    background-color: #10107B;
+    margin: -40px 80px 0px 80px;
+    padding: 30px;
+    border-radius: 10px;
+    z-index: 2;
+  }
+  
+  .filter-group {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  
+  .filter-group label {
+    color: #ffffff;
+    margin-bottom: 5px;
+  }
+  
+  .filter-select {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    width: 100%;
+  }
+  
+  .search-button {
+    background-color: #6c63ff;
+    border: none;
+    width: 80px;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    margin: 0 -10px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .search-button svg {
+    fill: #ffffff;
+  }
+  

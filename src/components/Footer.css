@@ -1,0 +1,70 @@
+.footer {
+    background-color: #10107B;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .subscribe-section {
+    margin-bottom: 20px;
+    margin-top: 5px;
+  }
+
+  .subscribe-section h1 {
+    font-size: 50px;
+  }
+  
+  .subscribe-section input {
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    width: 350px;
+    border-radius: 5px;
+  }
+  
+  .subscribe-section button {
+    padding: 10px 15px;
+    background-color: #6c63ff;
+    color: white;
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+  }
+
+  .create-club {
+    padding: 10px 15px;
+    background-color: #6c63ff;
+    color: white;
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
