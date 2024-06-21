@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const createError = require("../middleware/error.js");
+const {createError} = require("../middleware/error.js");
 
 //check if user is logged in
 const verifyToken = async (req, res, next) => {

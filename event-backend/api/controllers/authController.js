@@ -1,7 +1,7 @@
 const User = require("../models/user.js");
 const Club = require("../models/club.js");
 const bcrypt = require("bcryptjs");
-const {createError} = require("../middleware/error.js");
+const { createError } = require("../middleware/error.js");
 const jwt = require("jsonwebtoken");
 
 exports.signup = async (req, res,next) => {
