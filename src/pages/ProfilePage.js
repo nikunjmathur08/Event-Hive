@@ -5,7 +5,7 @@ import profilePic from '../assets/snoopy.jpeg'
 
 const ProfilePage = () => {
   const user = {
-    name: 'User Name',
+    name: 'snoopy :D',
     image: profilePic, // Replace with the actual image URL
   };
 

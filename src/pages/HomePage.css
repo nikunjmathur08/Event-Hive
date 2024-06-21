@@ -1,0 +1,81 @@
+.home {
+    font-family: Inter;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 10px 60px;
+    background-color: #fff;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  .sign-in-link {
+    margin-top: 20px;
+    color: #000;
+    padding: 10px 35px;
+    margin: 0 10px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  .create-event-link {
+    background-color: #7848F4;
+    margin-top: 20px;
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .banner-container {
+    margin: 0 20px;
+  }
+
+  .banner {
+    background-image: url('../assets/homepage.png');
+    background-size: cover;
+    border-radius: 10px;
+    max-height: 400px;
+    color: #000;
+    padding: 100px 40px;
+    text-align: center;
+  }
+
+  .banner h2 {
+    font-size: 80px;
+  }
+  
+  .events-section {
+    padding: 20px;
+  }
+
+  .events-section h2{
+    font-size: 40px;
+    padding: 0 0 0 20px;
+  }
+  
+  .events-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .load-more {
+    background-color: #6c63ff;
+    color: white;
+    width: 130px;
+    margin: 10px;
+    padding: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .load-more:hover {
+    background-color: #5a54e0;
+  }
