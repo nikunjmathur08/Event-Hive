@@ -1,0 +1,86 @@
+.club-details-page {
+    padding: 20px;
+    display: flex;
+  }
+  
+  .club-details-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .club-details-text {
+    flex: 1;
+    margin-right: 20px;
+    max-height: 700px;
+  }
+  
+  .club-details-text h1 {
+    font-size: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .club-details-text h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .club-details-text p {
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .club-social-links p {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  .club-details-image {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .club-details-image img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  .subscription-form {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .subscription-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    flex: 1;
+  }
+
+  .sidebar-icon {
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+  
+  .subscription-form button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .subscription-form button:hover {
+    background-color: #333;
+  }
+  

@@ -1,0 +1,33 @@
+.profile-page {
+  display: flex;
+}
+
+  .mains {
+    margin-left: 220px;
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .profile-card {
+    text-align: center;
+    align-items: center;
+    margin-left: 550px;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #333;
+  }
+
+  .profile-name {
+    margin-top: 15px;
+    font-family: Inter;
+    font-size: 30px;
+    color: #333;
+  }
