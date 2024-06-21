@@ -9,7 +9,7 @@ import useFetch from '../hooks/usefetch';
 
 const RecruitmentsPage = () => {
 
-  const { data: recruitments, loading, error } = useFetch('/event');
+  const { data: recruitments, loading, error } = useFetch('/event/category/Recruitment');
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading recruitments...</p>;

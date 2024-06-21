@@ -34,17 +34,18 @@ exports.getEvents = async (req, res, next) => {
     next(err);
   }
 };
-//upcoming event by category in Homepage
-exports.getEventbyCategory = async (req, res, next) => {  
+
+
+// event by category
+exports.getEventbyCategory = async (req, res, next) => {
   try {
-    const events = await Event.find({ category: req.params.category,
-      startDate: { $gt: new Date() } }).sort({ date: 1 });
+    const events = await Event.find({ category: req.params.category }).sort({ date: 1 });
     if(events.length==0) {
       res.status(200).json({message: "No events found!"});
         }
-    else {
-    res.status(200).json(events); }
-  } catch (err) {
+    else { 
+    res.status(200).json(events); 
+  } } catch (err) { 
     next(err);
   }
 };
@@ -75,7 +76,7 @@ exports.getPastEvents = async (req, res, next) => {
     next(err);
   }
 };
-// upcoming events
+// //upcoming event by category in Homepage
 exports.getUpcomingEvents = async (req, res, next) => {
   try {
     const events = await Event.find({

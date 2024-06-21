@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './ClubCard.css';
+import clubImage1 from '../assets/club-1.png';
 
 function ClubCard({ clubData }) {
   const navigate = useNavigate();
@@ -11,10 +12,10 @@ function ClubCard({ clubData }) {
 
   return (
     <div className='club-card' onClick={handleClick}>
-      <img src={clubData.image} alt={clubData.name} className='club-card-image'/>
+      <img src={clubImage1} alt={clubData.name} className='club-card-image'/>
       <div className='club-card-content'>
         <h3>{clubData.name}</h3>
-        <p>{clubData.clubName}</p>
+        <p>{clubData.desc}</p>
       </div>
     </div>
   );
