@@ -1,17 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import HomeEventCard from '../components/HomeEventCard';
 import EventFilter from '../components/EventFilter';
 import Footer from '../components/Footer';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import './HomePage.css';
-
-import eventImage1 from '../assets/event-1.png';
-import eventImage2 from '../assets/event-2.gif';
-import eventImage3 from '../assets/event-3.png';
-import eventImage4 from '../assets/event-4.jpg';
-import artistImage1 from '../assets/artist-1.jpg';
-import artistImage2 from '../assets/artist-2.jpg';
+import useFetch from '../hooks/usefetch'; // Importing the fetch hook
 
 const Heading = styled.h2`
   display: flex;
@@ -32,83 +26,26 @@ const Span1 = styled.h2`
   margin: 0;
 `;
 
-const events =  [
-    {
-      id: '1',
-      image: eventImage1,
-      name: 'jazz up the taste',
-      clubName: 'alexa developers',
-      venue: 'abc hall',
-      date: '12/12/24',
-      timings: '8 to 2',
-      description: 'sfbuydsvhdfs'
-    },
-  
-    {
-      id: '2',
-      image: eventImage2,
-      name: 'alexaverse',
-      clubName: 'alexa developers',
-      venue: 'abc hall',
-      date: '12/12/24',
-      timings: '8 to 2',
-      description: 'sfbuydsvhdfs'
-    },
-  
-    {
-      id: '3',
-      image: eventImage3,
-      name: 'app archives',
-      clubName: 'cherry+ network',
-      venue: 'abc hall',
-      date: '12/12/24',
-      timings: '8 to 2',
-      description: 'sfbuydsvhdfs'
-    },
-  
-    {
-      id: '4',
-      image: eventImage4,
-      name: 'roadshow',
-      clubName: 'aarush',
-      venue: 'abc hall',
-      date: '12/12/24',
-      timings: '8 to 2',
-      description: 'sfbuydsvhdfs'
-    },
-
-    {
-      id: '5',
-      image: artistImage1,
-      name: 'quantum computing',
-      clubName: 'ft. glitching coffée mAcHine',
-      venue: 'abc hall',
-      date: '12/12/24',
-      timings: '8 to 2',
-      description: 'sfbuydsvhdfs'
-    },
-
-    {
-      id: '6',
-      image: artistImage2,
-      name: 'vr symposium',
-      clubName: 'with vr based in space ooo',
-      venue: 'abc hall',
-      date: '12/12/24',
-      timings: '8 to 2',
-      description: 'sfbuydsvhdfs'
-    }
-  ]
-
 const Home = () => {
+  // Fetch events data from backend
+  const { data: events, loading, error } = useFetch('/event');
+  const [filteredEvents, setFilteredEvents] = useState([]);
 
-  const [filteredEvents, setFilteredEvents] = useState(events);
+  // Update filtered events when events data is fetched
+  useEffect(() => {
+    if (events) {
+      setFilteredEvents(events);
+    }
+  }, [events]);
 
   const handleFilterChange = (e) => {
     const { name, value } = e.target;
     const filtered = events.filter(event => event[name].toLowerCase().includes(value.toLowerCase()));
     setFilteredEvents(filtered);
   };
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error loading events... {error} </p>;
 
   return (
     <div className="home">

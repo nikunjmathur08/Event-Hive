@@ -1,20 +1,21 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './EventCard.css';
+import eventImage3 from '../assets/event-3.png';
 
 function EventCard({ eventData }) {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/events/${eventData.id}`, { state: { event: eventData } });
+    navigate(`/events/${eventData._id}`, { state: { event: eventData } });
   };
 
   return (
     <div className='event-card' onClick={handleClick}>
-      <img src={eventData.image} alt={eventData.name} className='event-card-image'/>
+      <img src={eventImage3} alt={eventData.name} className='event-card-image'/>
       <div className='event-card-content'>
         <h3>{eventData.name}</h3>
-        <p>{eventData.clubName}</p>
+        <p>{eventData.club}</p>
         <p>{eventData.date}</p>
         <p>{eventData.time}</p>
         <p>{eventData.venue}</p>
