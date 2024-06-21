@@ -16,6 +16,10 @@ const ClubSchema = new Schema({
   link: {
     type: String,
   },
+  adminEmail: {
+    type: String,
+    required: true
+  },
   Timestamp: {
     type: Date,
     default: Date.now

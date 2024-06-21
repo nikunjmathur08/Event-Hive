@@ -1,8 +1,9 @@
 const express = require('express');
 const eventController= require("../controllers/eventController.js");
+const adminCheck = require("../middleware/verify.js");
 const router = express.Router();
 
-router.post("/",eventController.createEvent);
+router.post("/",adminCheck.checkAdmin,eventController.createEvent);
 router.get("/",eventController.getEvents);
 router.get("/:id",eventController.getEvent);
 router.get("/category/:category",eventController.getEventbyCategory);
