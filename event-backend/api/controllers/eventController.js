@@ -1,7 +1,8 @@
 const Event = require('../models/event.js');
-const sendMail = require('../utils/mail.js');
+const sendMail = require('../middleware/mail.js');
 const Subscription = require('../models/subscription.js');
-const { createError } = require('../utils/error.js');
+const { createError } = require('../middleware/error.js');
+
 // Create Event
 exports.createEvent = async (req, res, next) => {
   const newEvent = new Event(req.body);
@@ -22,20 +23,22 @@ exports.createEvent = async (req, res, next) => {
     next(err);
   }
 };
-//all events in HomePage
+//all upcoming events in HomePage
 exports.getEvents = async (req, res, next) => {
   try {
-    const events = await Event.find();
+    const events = await Event.find({
+      startDate: { $gt: new Date() } }).sort({ date: 1    });
     if(!events) return next(createError(404, "No events found!"));
     res.status(200).json(events);
   } catch (err) {
     next(err);
   }
 };
-//event by category in Homepage
+//upcoming event by category in Homepage
 exports.getEventbyCategory = async (req, res, next) => {  
   try {
-    const events = await Event.find({ category: req.params.category });
+    const events = await Event.find({ category: req.params.category,
+      startDate: { $gt: new Date() } }).sort({ date: 1 });
     if(events.length==0) {
       res.status(200).json({message: "No events found!"});
         }

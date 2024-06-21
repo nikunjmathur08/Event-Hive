@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Subscription = require('../models/subscription.js');
-const { createError } = require('../utils/error.js');
+const { createError } = require('../middleware/error.js');
 
 router.post("/", async (req, res, next) => {
   

@@ -26,6 +26,8 @@ app.use("/api/auth",require("./api/routes/authRoutes.js"));
 app.use("/api/event",require("./api/routes/eventRoutes.js"));
 app.use("/api/club",require("./api/routes/clubRoutes.js"));
 app.use("/api/subscribe",require("./api/routes/subRoutes.js"));
+app.use("/api/user",require("./api/routes/userRoutes.js"));
+
 
 app.listen(4000, () =>{
   connect()
