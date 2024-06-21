@@ -19,7 +19,7 @@ const verifyToken = async (req, res, next) => {
 // check if user is verified
 exports.verifyUser = async (req, res, next) => {
   verifyToken(req,res,()=>{
-    if (req.user.id == req.params.id && req.user.isAdmin) {
+    if (req.user.id == req.params.id) {
       next();
     } else{
       return next(createError(403, "Access denied!")); }
