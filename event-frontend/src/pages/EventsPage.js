@@ -5,7 +5,7 @@ import ArtistCard from '../components/ArtistCard';
 import SearchBar from '../components/SearchBar';
 import './EventsPage.css';
 //fetch
-import useFetch from '../hooks/usefetch';
+import useFetch from '../usefetch';
 
 
 const EventsPage = () => {

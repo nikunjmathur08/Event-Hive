@@ -5,7 +5,7 @@ import SearchBar from '../components/SearchBar';
 import './RecruitmentsPage.css';
 
 //fetch
-import useFetch from '../hooks/usefetch';
+import useFetch from '../usefetch';
 
 const RecruitmentsPage = () => {
 
