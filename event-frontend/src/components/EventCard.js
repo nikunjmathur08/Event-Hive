@@ -2,6 +2,8 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './EventCard.css';
 
+import hackImage1 from '../assets/hack-1.jpg';
+
 function EventCard({ eventData }) {
   const navigate = useNavigate();
 
@@ -11,10 +13,10 @@ function EventCard({ eventData }) {
 
   return (
     <div className='event-card' onClick={handleClick}>
-      <img src={eventData.image} alt={eventData.name} className='event-card-image'/>
+      <img src={hackImage1} alt={eventData.name} className='event-card-image'/>
       <div className='event-card-content'>
         <h3>{eventData.name}</h3>
-        <p>{eventData.clubName}</p>
+        <p>{eventData.club}</p>
       </div>
     </div>
   );

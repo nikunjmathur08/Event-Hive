@@ -82,7 +82,7 @@ exports.getUpcomingEvents = async (req, res, next) => {
     category: req.params.category,  
     startDate: { $gt: new Date() } }).sort({ date: 1 });
     if(events.length==0) {
-      res.status(200).json({message: "No events found!"});
+      res.status(200).json({message: "No events found!"}).limit(5);
         }
     else {
     res.status(200).json(events); }
@@ -97,7 +97,7 @@ exports.getOngoingEvents = async (req, res, next) => {
     const events = await Event.find({
       category: req.params.category,
       startDate: { $lte: today },
-      endDate: { $gte: today } }).sort({ date: 1 });
+      endDate: { $gte: today } }).sort({ date: 1 }).limit(5);
       if(events.length==0) {
         res.status(200).json({message: "No events found!"});
           }

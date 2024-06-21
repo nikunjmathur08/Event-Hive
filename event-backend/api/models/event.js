@@ -31,15 +31,17 @@ endDate: {
   },
   venue:{
     type: String,
-    required: true
+    required: true,
+    enum: ['Mini Hall', 'Tech Park','TP Ganeshan']
   } ,
   category: {
     type: String,
     enum: ['Hackathon', 'Recruitment','Events'],
     required: true
   },
-  resigtrationLink: {
+  registrationLink: {
     type: String,
+    required: true
   },
   Timestamp: {
     type: Date,
