@@ -99,12 +99,6 @@ showcase your amazing clubs and events!
 - **backend:** Node.js and Express for handling API requests.
 - **database:** MongoDB for storing club and event details and user registrations.
 
-### 8. app in action!
-here's our app in action to get you a good feel! :D
-
-![InAction](event-frontend/src/assets/evinco.mov)
-
-
 ---
 
 ## getting started... now we're talking!
