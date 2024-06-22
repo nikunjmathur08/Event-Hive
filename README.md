@@ -109,7 +109,7 @@ this project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## acknowledgments
 
-- special thanks to @SumatiPaliwal89 who have made this project possible.
+- special thanks to [@SumatiPaliwal89](https://github.com/SumatiPaliwal89) who have made this project possible.
 - thanks to the open-source community for providing invaluable resources and tools.
 
 ---
