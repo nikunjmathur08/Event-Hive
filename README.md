@@ -19,19 +19,7 @@ stay updated with the latest tech events. Our events feature allows you to:
 - **backend:** Node.js and Express for handling API requests.
 - **database:** MongoDB for storing event details and user registrations.
 
-### 2. recruitments
-![Recruitments](event-frontend/src/assets/recruitments.jpg)
-
-find and apply for tech job opportunities. Our recruitment feature includes:
-- **job listings:** view and apply for jobs from top companies.
-- **application tracker:** track your job applications.
-
-**implementation:**
-- **frontend:** HTML, CSS, and JavaScript along with React for a dynamic UI.
-- **backend:** Node.js and Express for handling API requests.
-- **database:** MongoDB for storing recruitment details and user registrations.
-
-### 3. hackathons
+### 2. hackathons
 ![Hackathons](event-frontend/src/assets/hackathons.jpg)
 
 participate in exciting hackathons. Features include:
@@ -43,7 +31,36 @@ participate in exciting hackathons. Features include:
 - **backend:** Node.js and Express for handling API requests.
 - **database:** MongoDB for storing hackathon details and user registrations.
 
-### 4. profile
+### 3. recruitments
+![Recruitments](event-frontend/src/assets/recruitments.jpg)
+
+find and apply for tech job opportunities. Our recruitment feature includes:
+- **job listings:** view and apply for jobs from top companies.
+- **application tracker:** track your job applications.
+
+**implementation:**
+- **frontend:** HTML, CSS, and JavaScript along with React for a dynamic UI.
+- **backend:** Node.js and Express for handling API requests.
+- **database:** MongoDB for storing recruitment details and user registrations.
+
+### 4. clubs
+![Clubs](event-frontend/src/assets/clubs.jpg)
+
+here's how your cool and amazing clubs would look like
+
+![ClubDetails](event-frontend/src/assets/club_details.jpg)
+
+participate in cool clubs. Features include:
+- **clubs listings:** find clubs from various domains.
+- **submission portal:** submit your projects and track progress.
+
+**implementation:**
+- **frontend:** HTML, CSS, and JavaScript along with React for a dynamic UI.
+- **backend:** Node.js and Express for handling API requests.
+- **database:** MongoDB for storing club details and user registrations.
+
+
+### 5. profile
 ![Profile](event-frontend/src/assets/profile.jpg)
 
 manage your personal and professional information. Features include:
@@ -55,6 +72,38 @@ manage your personal and professional information. Features include:
 - **frontend:** HTML, CSS, and JavaScript along with React for a dynamic UI.
 - **backend:** Node.js and Express for handling API requests.
 - **database:** MongoDB for storing profile details.
+
+### 6. settings
+![Settings](event-frontend/src/assets/settings.jpg)
+
+participate in exciting hackathons. Features include:
+- **changing info:** you can edit your profile photo, email and your name.
+- **submission portal:** submit your projects and track progress.
+
+**implementation:**
+- **frontend:** HTML, CSS, and JavaScript along with React for a dynamic UI.
+- **backend:** Node.js and Express for handling API requests.
+- **database:** MongoDB for storing hackathon details and user registrations.
+
+
+### 7. create events & clubs
+![CreateEvents](event-frontend/src/assets/create_event.jpg)
+![CreateClubs](event-frontend/src/assets/create_club.jpg)
+
+showcase your amazing clubs and events!
+- **clubs and events listings:** create listings of your events and clubs.
+- **submission portal:** submit your projects and track progress.
+
+**implementation:**
+- **frontend:** HTML, CSS, and JavaScript along with React for a dynamic UI.
+- **backend:** Node.js and Express for handling API requests.
+- **database:** MongoDB for storing club and event details and user registrations.
+
+### 8. app in action!
+here's our app in action to get you a good feel! :D
+
+![InAction](event-frontend/src/assets/evinco.mov)
+
 
 ---
 
