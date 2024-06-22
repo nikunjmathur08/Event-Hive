@@ -7,7 +7,7 @@ Welcome to **Evinco**, a platform designed to streamline the organization and pa
 ## Features
 
 ### 1. Events
-![Events](src/assets/events.jpg)
+![Events](../evinco/event-frontend/src/assets/events.jpg)
 
 Stay updated with the latest tech events. Our events feature allows you to:
 - **Browse Events:** Explore detailed descriptions, schedules, and venues.
@@ -20,7 +20,7 @@ Stay updated with the latest tech events. Our events feature allows you to:
 - **Database:** MongoDB for storing event details and user registrations.
 
 ### 2. Recruitments
-![Recruitments](src/assets/recruitments.jpg)
+![Recruitments](../evinco/event-frontend/src/assets/recruitments.jpg)
 
 Find and apply for tech job opportunities. Our recruitment feature includes:
 - **Job Listings:** View and apply for jobs from top companies.
@@ -33,7 +33,7 @@ Find and apply for tech job opportunities. Our recruitment feature includes:
 - **Database:** MongoDB for storing recruitment details and user registrations.
 
 ### 3. Hackathons
-![Hackathons](src/assets/hackathons.jpg)
+![Hackathons](../evinco/event-frontend/src/assets/hackathons.jpg)
 
 Participate in exciting hackathons. Features include:
 - **Hackathon Listings:** Find hackathons from various domains.
@@ -46,7 +46,7 @@ Participate in exciting hackathons. Features include:
 - **Database:** MongoDB for storing hackathon details and user registrations.
 
 ### 4. Profile
-![Profile](src/assets/profile.jpg)
+![Profile](../evinco/event-frontend/src/assets/profile.jpg)
 
 Manage your personal and professional information. Features include:
 - **Personal Info:** Update contact details and social media links.
